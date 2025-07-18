@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>わさびのWEB製作所</title>
+</head>
+<body>
+    <h1>わさびのWEB製作所へようこそ！</h1>
+    <p>ここでは、あなたの<span>ウェブサイト作成の依頼の仕方</span>を説明します。</p>
+    <p><span>わさびのWEB製作所</span>は、あなたのアイデアを形にするお手伝いをします。</p><br>
+    <p>料金について</p>
+    <div class="plan-container">
+        <div class="plan">
+            <p>LightPlan</p>
+            <p>990円</p>
+            <p class="description">HTML形式のファイルをお届けします。<br>アップロード、SEO対策などはしません</p>
+        </div>
+        <div class="plan">
+            <p>MediumPlan</p>
+            <p>2800円</p>
+            <p class="description">アップロードからSEO対策、ドメイン作成まで行います。<br>※年額で2600円です。</p>
+        </div>
+        <div class="plan">
+            <p>FullPlan</p>
+            <p>5800円</p>
+            <p class="description">MediumPlanの内容に加え、<br>サイトの容量の増加と、性能を向上させます。※年額で5800円です。</p>
+        </div>
+    </div>
+    <p>ご依頼の流れ</p>
+    <div class="claimWEBSITE">
+        <div class="steps">
+            <p class="description step">①まずは、<span>わさびのWEB製作所</span>の<a href="https://x.com/wasabWebCreater" target="_blank">公式X(旧Twitter)にDMで依頼</a>。</p>
+            <p class="description step">②その後、要望を聞き、最適なプランをご提案</p>
+            <p class="description step">③ご提案内容にご納得、正式に依頼</p>
+            <p class="description step">④ご依頼後、制作を開始し、完成次第ご連絡</p>
+    </div>
+    <div class="contact-info">
+        <p class="description">ご不明点やご質問がございましたら、いつでもお気軽にお問い合わせください。</p>
+        <p class="description">ご依頼をお待ちしております。</p>
+        <p class="description">お問い合わせは、<span>わさびのWEB製作所</span>の<a href="https://x.com/wasabWebCreater" target="_blank">公式X(旧Twitter)</a>までお願いいたします。</p>
+        </div>
+    </div>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ded7d7;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            color: #4CAF50;
+            font-size: 5rem;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+            @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff,
+                           0 0 20px #fff,
+                           0 0 30px #4CAF50,
+                           0 0 40px #4CAF50;
+            }
+            
+            to {
+                text-shadow: 0 0 20px #fff,
+                           0 0 30px #91a23b,
+                           0 0 40px #91a23b,
+                           0 0 50px #91a23b;
+                opacity: 0.8;
+            }
+        }
+        p {
+            color: rgb(109, 155, 109);
+            font-size: 2rem;
+            text-align: center;
+        }
+        span{
+            color: #91a23b;
+            font-weight: bold;
+        }
+        .plan-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        .plan {
+            background-color: #f0f0f0;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            margin: 2rem 0;
+            width: 15rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .plan:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            animation: planGlow 1.5s ease-in-out infinite alternate;
+        }
+        @keyframes planGlow {
+            from {
+                box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+            }
+            to {
+                box-shadow: 0 5px 25px rgba(145, 162, 59, 0.7);
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .plan-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .plan {
+                width: 45%;  /* スマートフォン表示時の幅を調整 */
+                margin: 1rem 0;
+            }
+            
+            h1 {
+                font-size: 3rem;  /* スマートフォン表示時の文字サイズを調整 */
+            }
+            
+            p {
+                font-size: 1.5rem;
+            }
+        }
+        .description{
+            font-size: 1rem;
+        }
+        .claimWEBSITE {
+            background-color: #f9f9f9;
+            border: #4CAF50 solid 2px;
+            padding: 5rem;
+            border-radius: 5%;
+            margin-top: 5rem;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .step {
+        text-align: left;
+        padding-left: 2rem;
+        position: relative;
+    }
+    
+    .contact-info {
+        margin-top: 2rem;
+        border-top: 1px solid #4CAF50;
+        padding-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .step {
+            padding-left: 1rem;
+        }
+    }
+    </style>
+</body>
+</html>
