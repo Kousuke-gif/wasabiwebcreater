@@ -42,13 +42,51 @@
         <p class="description">お問い合わせは、<span>わさびのWEB製作所</span>の<a href="https://x.com/wasabWebCreater" target="_blank">公式X(旧Twitter)</a>までお願いいたします。</p>
         </div>
     </div>
+    <p>わさびのWEB製作所のメリット</p>
+    <div class="plan-container">
+        <div class="plan">
+            <p>迅速な対応</p>
+            <p class="description">ご依頼から制作開始までのスピードが速いです。</p>
+        </div>
+        <div class="plan">
+            <p>高品質デザイン</p>
+            <p class="description">ユーザビリティを重視した、見やすく使いやすいデザインを提供します。気に入らなかったら無償で修正いたします。</p>
+        </div>
+        <div class="plan">
+            <p>SEO対策</p>
+            <p class="description">検索エンジン最適化を施し、より多くの訪問者を集めることができます。</p>
+        </div>
+    </div>
+    <p>利用規約</p>
+    <div class="claimWEBSITE">
+        <p class="description">わさびのWEB製作所では、以下の利用規約に基づいてサービスを提供します。</p>
+        <ul class="description">
+            <li>ご依頼内容は、法律に反するものや公序良俗に反するものはお受けできません。</li>
+            <li>制作物の著作権は、納品後にお客様に移転します。ただし、制作物のサンプルとして、わさびのWEB製作所が使用することがあります。</li>
+            <li>料金は、事前にお知らせした金額をお支払いいただきます。支払い方法は、Pay.jpを利用します。</li>
+            <li>納品物の品質に関しては、最大限の努力をいたしますが、万が一不具合が発生した場合は、速やかに修正対応いたします。</li>
+            <li>ご依頼内容に関する秘密保持を厳守いたします。お客様の情報は、制作に必要な範囲内でのみ使用し、第三者に開示することはありません。</li>
+            <li>サービスの内容や料金は、予告なく変更する場合があります。変更がある場合は、事前にお知らせいたします。</li>
+            <li>サービスの提供に関して、何らかのトラブルが発生した場合は、速やかに対応いたします。</li> 
+    </div>
     <style type="text/css">
         body {
             font-family: Arial, sans-serif;
             background-color: #ded7d7;
             color: #333;
             margin: 20px;
+            animation: fadeIn 1.5s ease-in;
         }
+        @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
         h1 {
             color: #4CAF50;
             font-size: 5rem;
@@ -76,10 +114,54 @@
             font-size: 2rem;
             text-align: center;
         }
+        p:not(.description) {
+        position: relative;
+        overflow: hidden;
+        animation: wave 2s ease-in-out infinite;
+        }
+        @keyframes wave {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+    }
         span{
             color: #91a23b;
             font-weight: bold;
+            position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #91a23b;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
         }
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+    a {
+        position: relative;
+        text-decoration: none;
+        &::before {
+            content: '→';
+            position: absolute;
+            left: -20px;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        &:hover::before {
+            left: -25px;
+            opacity: 1;
+        }
+    }
         .plan-container {
             display: flex;
             justify-content: center;
@@ -166,6 +248,17 @@
     @media screen and (max-width: 768px) {
         .step {
             padding-left: 1rem;
+        }
+    }
+    .claimWEBSITE li {
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: slideIn 0.5s ease forwards;
+    }
+    @keyframes slideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
         }
     }
     </style>
